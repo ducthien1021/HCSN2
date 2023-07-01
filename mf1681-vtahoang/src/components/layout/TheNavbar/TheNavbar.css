@@ -1,0 +1,175 @@
+.h-navbar {
+    width: 66px;
+    height: 100vh;
+    background-color: var(--color-blue-1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    font-size: 13px;
+}
+
+.h-navbar--expand {
+    width: 200px;
+}
+
+.h-navbar__logo {
+    padding: 12px 0 4px 16px;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.h-logo__text,
+.h-navbar__btn--text {
+    overflow: hidden;
+    flex: 1;
+}
+
+.h-logo__img {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -20px -680px;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+}
+
+.h-navbar__overview {
+    margin-top: 16px;
+}
+
+.h-navbar__btn--icon {
+    width: 44px;
+    padding-left: 12px;
+    height: 40px;
+    margin-left: 11px;
+    border-radius: 6px;
+    color: var(--color-grey-2);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.h-navbar--expand .h-navbar__btn--icon {
+    width: calc(100% - 24px);
+}
+
+.h-navbar__btn--icon div:first-child {
+    background-image: url("../../../assets/icon/qlts-icon.svg");
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    filter: var(--filter-grey-2);
+}
+
+.h-btn__icon--expand {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -158px -293px;
+    width: 0;
+    height: 7px;
+    right: 8px;
+    filter: var(--filter-grey-2);
+    position: absolute;
+    transition: all 0.3s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.h-navbar__btn--icon:hover {
+    background-color: var(--color-blue-2);
+    color: #fff;
+    filter: unset;
+}
+
+.h-navbar--expand .h-btn__icon--expand {
+    width: 12px;
+}
+
+.h-navbar__btn--icon:hover .h-btn__icon--expand {
+    filter: unset;
+}
+
+.h-navbar__btn--icon--active .h-btn__icon--expand {
+    filter: unset;
+}
+
+.h-navbar__btn--icon:hover > div:first-child {
+    background-position-y: -197px;
+    filter: unset;
+}
+
+.h-navbar__btn--icon--active {
+    background-color: var(--color-blue-2);
+    color: #fff;
+    filter: unset;
+}
+
+.h-navbar__btn--icon--active > div:first-child {
+    background-position-y: -197px;
+    filter: unset;
+}
+
+.h-overview__icon {
+    background-position: -21px -153px;
+}
+
+.h-assets__icon {
+    background-position: -65px -153px;
+}
+
+.h-road__icon {
+    background-position: -110px -153px;
+}
+
+.h-tool__icon {
+    background-position: -153px -153px;
+}
+
+.h-categories__icon {
+    background-position: -197px -153px;
+}
+
+.h-search__icon {
+    background-position: -241px -153px;
+}
+
+.h-report__icon {
+    background-position: -329px -153px;
+}
+
+.h-navbar__bottom {
+    width: 66px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    border-top: 2px solid var(--color-grey-2);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 16px;
+    cursor: pointer;
+}
+
+.h-navbar__btn--shrink {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -329px -417px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.h-navbar--expand .h-navbar__bottom {
+    width: 100%;
+}
+
+.h-navbar--expand .h-navbar__btn--shrink {
+    background-position: -285px -417px;
+}

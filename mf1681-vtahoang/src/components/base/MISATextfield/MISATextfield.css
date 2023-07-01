@@ -1,0 +1,77 @@
+.h-textfield {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 13px;
+    position: relative;
+}
+
+.h-textfield input {
+    height: 36px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid var(--color-grey-3);
+    width: 100%;
+    padding: 0 12px;
+}
+
+.h-textfield input::placeholder {
+    font-size: 14px;
+    font-style: italic;
+}
+.h-textfield input:hover {
+    border-color: var(--color-blue-2);
+}
+
+.h-textfield input:focus {
+    border-color: var(--color-blue-2);
+}
+.h-textfield input:disabled {
+    background-color: var(--color-grey-4);
+}
+
+.h-textfield label span {
+    color: red;
+}
+
+.h-textfield input:disabled:hover {
+    border: 1px solid var(--color-grey-3);
+}
+
+.h-textfield input:disabled:focus {
+    border: 1px solid var(--color-grey-3);
+}
+
+.h-textfield input[textRight="true"] {
+    text-align: end;
+}
+
+.h-textfield__icon ~ input {
+    padding-right: 36px;
+}
+
+.h-textfield__icon {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    bottom: 18px;
+    transform: translateY(50%);
+}
+
+.h-textfield__icon--expand {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -72px -338px;
+    width: 7px;
+    height: 5px;
+}
+
+.h-textfield__icon--dropdown {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -204px -332px;
+    width: 8px;
+    height: 16px;
+}
+
+.h-textfield__icon--calender {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -287px -67px;
+    width: 18px;
+    height: 18px;
+}
