@@ -1,0 +1,45 @@
+:root {
+  --basic-color: #1aa4c8;
+  --sidebar-bg-color: #1c3048;
+  --bg-color: #ffffff;
+  --row-hover-color: rgba(26, 164, 200, 0.2);
+  --main-bg-color: #f1f4fc;
+  --btn-hover-color: #0582a2;
+  --btn-focus-color: #6ec6dc;
+  --btn-active-color: #28b7dc;
+  --btn-border-color: #addeeb;
+  --btn-disabled-color: #8cd1e3;
+  --filter-color: brightness(0) saturate(100%) invert(40%) sepia(7%)
+    saturate(1530%) hue-rotate(173deg) brightness(88%) contrast(82%);
+  --img-url: url("@/assets/icon/qlts-icon.svg");
+  --checkbox-column-widths: 4%;
+  --id-column-widths: 4%;
+  --code-column-widths: 12%;
+  --name-column-widths: 13.5%;
+  --type-column-widths: 13%;
+  --department-column-widths: 14%;
+  --quantity-column-widths: 5%;
+  --cost-column-widths: 9%;
+  --accum-column-widths: 9.5%;
+  --remain-column-widths: 9%;
+  --func-column-widths: 7%;
+  --summary-widths: calc(39.5% + 0.395 * 20px);
+  --summary-quantity-widths: 12.66%;
+  --summary-cost-widths: 22.78%;
+  --summary-accum-widths: 24.05%;
+  --summary-func-widths: 17.79%%;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto/Roboto-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
