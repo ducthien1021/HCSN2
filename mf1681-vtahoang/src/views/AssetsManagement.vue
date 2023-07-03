@@ -305,6 +305,7 @@ function created() {
 
 function updated() {
     try {
+        // update tổng khi có thay đổi
         this.updateTotal();
     } catch (error) {
         console.log(error);
@@ -313,12 +314,13 @@ function updated() {
 
 function data() {
     return {
-        assetsList: [], //danh
-        isShowForm: false,
-        totalAmount: 0,
-        totalOriginal: 0,
-        totalAccumulated: 0,
-        totalRemaining: 0,
+        assetsList: [], //danh sách tài sản
+        isShowForm: false, //ẩn hiện form thêm/sửa tài sản
+        totalAmount: 0, // tổng số lượng
+        totalOriginal: 0, // tổng nguyên giá
+        totalAccumulated: 0, // tổng hao mòn lũy kế
+        totalRemaining: 0, // tổng giá trị còn lại
+        formTitle: "", // tiêu đề form
     };
 }
 
