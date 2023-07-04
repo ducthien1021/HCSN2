@@ -1,7 +1,7 @@
 <template>
-    <button :class="buttonClasses" class="h-btn__main">
-        <div v-if="icon" :class="buttonClassesIcon" class="h-btn__main--icon"></div>
-        <div :class="buttonClassesText" class="h-btn__main--text">{{ text }}</div>
+    <button class="h-btn__main" :style="style">
+        <MISAIcon :icon="icon"></MISAIcon>
+        <div class="h-btn__main--text"><slot></slot></div>
     </button>
 </template>
 
@@ -10,28 +10,24 @@
 </style>
 
 <script>
+import MISAIcon from "../MISAIcon/MisaIcon.vue";
+
+const components = {
+    MISAIcon,
+};
+
 export default {
+    name: "MISAButtonMain",
     props: {
-        text: {
+        icon: {
             type: String,
             default: "",
         },
-        buttonClasses: {
-            type: Array,
-            default: () => [],
-        },
-        buttonClassesIcon: {
-            type: Array,
-            default: () => [],
-        },
-        buttonClassesText: {
-            type: Array,
-            default: () => [],
-        },
-        icon: {
-            type: Boolean,
-            default: false,
+        style: {
+            type: Object,
+            default: {},
         },
     },
+    components,
 };
 </script>

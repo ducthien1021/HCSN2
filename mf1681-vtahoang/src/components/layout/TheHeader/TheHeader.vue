@@ -24,3 +24,9 @@
 <style>
 @import url(./TheHeader.css);
 </style>
+
+<script>
+export default {
+    name: "TheHeader",
+};
+</script>

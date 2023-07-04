@@ -17,6 +17,10 @@ export default {
             type: String,
             default: "",
         },
+        dataList: {
+            type: Array,
+            default: () => [],
+        },
     },
 };
 </script>

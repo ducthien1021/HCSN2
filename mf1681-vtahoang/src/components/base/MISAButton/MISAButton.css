@@ -12,6 +12,7 @@
     gap: 4px;
     font-size: 13px;
     min-width: 36px;
+    padding: 0 12px;
 }
 
 .h-btn__main:hover {
@@ -36,7 +37,7 @@
 }
 
 .h-btn__sub {
-    border: 1px solid var(--color-blue-2);
+    border: none;
     height: 36px;
     border-radius: 3px;
     background-color: #fff;
@@ -46,6 +47,9 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    min-width: 36px;
+    padding: 0 12px;
+    color: #000;
 }
 
 .h-btn__sub:hover {

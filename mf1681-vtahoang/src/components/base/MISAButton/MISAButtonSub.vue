@@ -1,7 +1,6 @@
 <template>
-    <button :class="buttonClasses" class="h-btn__sub">
+    <button class="h-btn__sub" :style="style">
         <slot></slot>
-        {{ text }}
     </button>
 </template>
 
@@ -12,13 +11,13 @@
 <script>
 export default {
     props: {
-        text: {
+        icon: {
             type: String,
             default: "",
         },
-        buttonClasses: {
-            type: Array,
-            default: () => [],
+        style: {
+            type: Object,
+            default: {},
         },
     },
 };

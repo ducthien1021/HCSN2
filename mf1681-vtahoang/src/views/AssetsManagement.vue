@@ -17,20 +17,15 @@
                         </div>
                     </div>
                     <div class="h-toolbar__right">
-                        <MISAButtonSub :buttonClasses="['h-toolbar__delete']">
-                            <div class="h-delete__icon"></div>
+                        <MISAButtonSub>
+                            <MISAIcon :icon="'delete'"></MISAIcon>
                         </MISAButtonSub>
-                        <MISAButtonSub :buttonClasses="['h-toolbar__excel']">
-                            <div class="h-excel__icon"></div>
+                        <MISAButtonSub>
+                            <MISAIcon :icon="'excel'"></MISAIcon>
                         </MISAButtonSub>
-                        <MISAButtonMain
-                            text="Thêm tài sản"
-                            :buttonClasses="['h-toolbar__add']"
-                            :buttonClassesIcon="['h-toolbar__add--icon']"
-                            :buttonClassesText="['h-toolbar__add--text']"
-                            :icon="true"
-                            @click="toggleForm(1)"
-                        ></MISAButtonMain>
+                        <MISAButtonMain :icon="'add--white'" @click="showForm()"
+                            >Thêm tài sản</MISAButtonMain
+                        >
                     </div>
                 </div>
                 <div class="h-page__table">
@@ -85,7 +80,7 @@
                                             <div class="h-tool__edit">
                                                 <div
                                                     class="h-tool__edit--icon"
-                                                    @click="toggleForm"
+                                                    @click="showForm(item.AssetID)"
                                                 ></div>
                                             </div>
                                         </div>
@@ -130,7 +125,19 @@
                 </div>
             </div>
         </div>
-        <MISAForm v-show="isShowForm" tittle="Sửa tài sản" @toggle-form="toggleForm"></MISAForm>
+        <MISAForm
+            v-show="formMode == $_MISAEnum.form.formMode.add"
+            :formMode="formMode"
+            @close-form="closeForm"
+            :title="$_MISAResources.formTitle.add"
+        ></MISAForm>
+        <MISAForm
+            v-show="formMode == $_MISAEnum.form.formMode.edit"
+            :formMode="formMode"
+            :dataObject="dataObject"
+            @close-form="closeForm"
+            :title="$_MISAResources.formTitle.edit"
+        ></MISAForm>
     </div>
 </template>
 
@@ -140,50 +147,38 @@
 
 <script>
 // import components
-import TheNavbar from "../components/layout/TheNavbar/TheNavbar.vue";
-import TheHeader from "../components/layout/TheHeader/TheHeader.vue";
 import MISAButtonMain from "../components/base/MISAButton/MISAButtonMain.vue";
 import MISAButtonSub from "../components/base/MISAButton/MISAButtonSub.vue";
 import MISASearch from "../components/base/MISASearch/MISASearch.vue";
 import MISADropdown from "../components/base/MISADropdown/MISADropdown.vue";
 import MISAForm from "../components/base/MISAForm/MISAForm.vue";
-
-/**
- * Xử lý dữ liệu số
- * Author: vtahoang - (23/06/2023)
- */
-function numberHandler(value) {
-    try {
-        if (value != null) {
-            let formatter = new Intl.NumberFormat("VN-VI", {
-                style: "currency",
-                currency: "VND",
-            }).formatToParts(value);
-            let currency = "";
-            let length = formatter.length;
-            for (let i = 1; i < length; i++) {
-                currency += formatter[i].value;
-            }
-            return currency;
-        }
-        return "";
-    } catch (error) {
-        console.log(error);
-        return "";
-    }
-}
+import MISAIcon from "../components/base/MISAIcon/MISAIcon.vue";
 
 /**
  * Ẩn hiện form
  * Author: vtahoang - (23/06/2023)
  */
-function toggleForm(type) {
+function showForm(AssetID) {
     try {
-        console.log(type);
+        // có AssetID thì là edit, không có thì là add
+        if (AssetID) {
+            this.formMode = this.$_MISAEnum.form.formMode.edit;
+            this.assetsList.forEach((item) => {
+                if (item.AssetID == AssetID) {
+                    this.dataObject = { ...item };
+                }
+            });
+        } else {
+            this.formMode = this.$_MISAEnum.form.formMode.add;
+        }
         this.isShowForm = !this.isShowForm;
     } catch (error) {
         console.log(error);
     }
+}
+
+function closeForm() {
+    this.formMode = this.$_MISAEnum.form.formMode.hide;
 }
 
 /**
@@ -278,24 +273,24 @@ function ifAllChecked() {
     }
 }
 
-const methods = {
-    numberHandler,
-    toggleForm,
-    cloneData,
-    updateTotal,
-    selectAll,
-    ifAllChecked,
-};
-
 function created() {
     /**
      * Lấy danh sách tài sản
      * Author: vtahoang - (23/06/2023)
      */
-    fetch("https://64952491b08e17c91791ae79.mockapi.io/HCSN")
-        .then((response) => response.json())
+    // fetch("https://64952491b08e17c91791ae79.mockapi.io/HCSN")
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         this.assetsList = data;
+    //         this.updateTotal();
+    //     })
+    //     .catch((error) => {
+    //         console.log(error);
+    //     });
+    this.maxios
+        .get("https://64952491b08e17c91791ae79.mockapi.io/HCSN")
         .then((data) => {
-            this.assetsList = data;
+            this.assetsList = data.data;
             this.updateTotal();
         })
         .catch((error) => {
@@ -312,33 +307,37 @@ function updated() {
     }
 }
 
-function data() {
-    return {
-        assetsList: [], //danh sách tài sản
-        isShowForm: false, //ẩn hiện form thêm/sửa tài sản
-        totalAmount: 0, // tổng số lượng
-        totalOriginal: 0, // tổng nguyên giá
-        totalAccumulated: 0, // tổng hao mòn lũy kế
-        totalRemaining: 0, // tổng giá trị còn lại
-        formTitle: "", // tiêu đề form
-    };
-}
-
-const components = {
-    TheHeader,
-    TheNavbar,
-    MISAButtonMain,
-    MISAButtonSub,
-    MISASearch,
-    MISADropdown,
-    MISAForm,
-};
-
 export default {
-    components,
+    components: {
+        MISAButtonMain,
+        MISAButtonSub,
+        MISASearch,
+        MISADropdown,
+        MISAForm,
+        MISAIcon,
+    },
+
+    data: () => {
+        return {
+            assetsList: [], //danh sách tài sản
+            isShowForm: false, //ẩn hiện form thêm/sửa tài sản
+            totalAmount: 0, // tổng số lượng
+            totalOriginal: 0, // tổng nguyên giá
+            totalAccumulated: 0, // tổng hao mòn lũy kế
+            totalRemaining: 0, // tổng giá trị còn lại
+            formMode: 0, // trạng thái form
+            dataObject: {},
+        };
+    },
+    methods: {
+        showForm,
+        cloneData,
+        updateTotal,
+        selectAll,
+        ifAllChecked,
+        closeForm,
+    },
     created,
-    data,
-    methods,
     updated,
 };
 </script>

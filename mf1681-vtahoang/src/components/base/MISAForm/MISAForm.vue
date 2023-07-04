@@ -2,16 +2,17 @@
     <div class="h-form">
         <div class="h-form__container">
             <div class="h-form__header">
-                <div class="h-form__title">{{ tittle }}</div>
-                <div class="h-form__close" @click="toggleForm"></div>
+                <div class="h-form__title">{{ title }}</div>
+                <div class="h-form__close" @click="closeForm"></div>
             </div>
             <div class="h-form__main">
                 <div class="h-form__row">
                     <div class="h-form__assetid">
                         <MISATextfield
+                            ref="firstInput"
                             label="Mã tài sản"
                             :required="true"
-                            value="TS00001"
+                            v-model="assetsData.AssetID"
                         ></MISATextfield>
                     </div>
                     <div class="h-form__name">
@@ -19,6 +20,7 @@
                             label="Tên tài sản"
                             :required="true"
                             placeholder="Nhập tên tài sản"
+                            v-model="assetsData.Name"
                         ></MISATextfield>
                     </div>
                 </div>
@@ -28,7 +30,8 @@
                             label="Mã bộ phận sử dụng"
                             :required="true"
                             placeholder="Chọn mã bộ phận sử dụng"
-                            :expandIcon="true"
+                            icon="expand"
+                            v-model="assetsData.Department"
                         ></MISATextfield>
                     </div>
                     <div class="h-form__department">
@@ -41,7 +44,8 @@
                             label="Mã loại tài sản"
                             :required="true"
                             placeholder="Chọn mã loại tài sản"
-                            :expandIcon="true"
+                            icon="expand"
+                            v-model="assetsData.Type"
                         ></MISATextfield>
                     </div>
                     <div class="h-form__asset">
@@ -51,18 +55,18 @@
                 <div class="h-form__row">
                     <div class="h-form__amount">
                         <MISATextfield
-                            label="Mã loại tài sản"
+                            label="Số lượng"
                             :required="true"
-                            value="01"
+                            v-model="assetsData.Amount"
                             :textRight="true"
-                            :dropDownIcon="true"
+                            icon="dropdown"
                         ></MISATextfield>
                     </div>
                     <div class="h-form__originalprice">
                         <MISATextfield
                             label="Nguyên giá"
                             :required="true"
-                            value="0"
+                            v-model="assetsData.TheOriginalPrice"
                             :textRight="true"
                         ></MISATextfield>
                     </div>
@@ -70,7 +74,7 @@
                         <MISATextfield
                             label="Số năm sử dụng"
                             :required="true"
-                            value="0"
+                            v-model="assetsData.YearUse"
                             :textRight="true"
                         ></MISATextfield>
                     </div>
@@ -80,16 +84,16 @@
                         <MISATextfield
                             label="Tỷ lệ hao mòn (%)"
                             :required="true"
-                            value="0"
+                            v-model="assetsData.atrophyPercents"
                             :textRight="true"
-                            :dropDownIcon="true"
+                            icon="dropdown"
                         ></MISATextfield>
                     </div>
                     <div class="h-form__atrophy">
                         <MISATextfield
                             label="Giá trị hao mòn năm"
                             :required="true"
-                            value="0"
+                            v-model="assetsData.atrophy"
                             :textRight="true"
                         ></MISATextfield>
                     </div>
@@ -97,7 +101,7 @@
                         <MISATextfield
                             label="Năm theo dõi"
                             :disable="true"
-                            :value="year"
+                            v-model="year"
                             :textRight="true"
                         ></MISATextfield>
                     </div>
@@ -107,32 +111,24 @@
                         <MISATextfield
                             label="Ngày mua"
                             :required="true"
-                            :value="date"
-                            :calenderIcon="true"
+                            v-model="date"
+                            icon="calendar"
                         ></MISATextfield>
                     </div>
                     <div class="h-form__dayuse">
                         <MISATextfield
                             label="Ngày sử dụng"
                             :required="true"
-                            :value="date"
-                            :calenderIcon="true"
+                            v-model="date"
+                            icon="calendar"
                         ></MISATextfield>
                     </div>
                     <div></div>
                 </div>
             </div>
             <div class="h-form__footer">
-                <MISAButtonSub
-                    :buttonClasses="['h-footer__button', 'h-footer__button--cancel']"
-                    text="Huỷ"
-                    @click="toggleForm"
-                ></MISAButtonSub>
-                <MISAButtonMain
-                    :buttonClasses="['h-footer__button', 'h-footer__button--save']"
-                    text="Lưu"
-                    @click="toggleForm"
-                ></MISAButtonMain>
+                <MISAButtonSub :style="{ width: '96px' }" @click="closeForm">Huỷ</MISAButtonSub>
+                <MISAButtonMain :style="{ width: '96px' }" @click="saveForm">Lưu</MISAButtonMain>
             </div>
         </div>
     </div>
@@ -147,49 +143,71 @@ import MISATextfield from "../MISATextfield/MISATextfield.vue";
 import MISAButtonMain from "../MISAButton/MISAButtonMain.vue";
 import MISAButtonSub from "../MISAButton/MISAButtonSub.vue";
 
-/**
- * Date handler
- * Author: vtahoang - (20/06/2023)
- */
-function dateHandler(date) {
-    try {
-        if (date != null) {
-            date = new Date(date);
-            let month = date.getMonth() + 1;
-            return `${date.getDate()}/${month}/${date.getFullYear()}`;
-        }
-        return "";
-    } catch (error) {
-        console.log(error);
-        return "";
-    }
-}
-
-const computed = {
-    date() {
-        return dateHandler(new Date());
-    },
-    year() {
-        return new Date().getFullYear().toString();
-    },
-};
-
 export default {
+    name: "MISAForm",
+    watch: {
+        dataObject: function () {
+            this.assetsData = this.dataObject;
+        },
+        formMode: function () {
+            // focus vào input đầu tiên khi mở form
+            setTimeout(() => {
+                this.$refs.firstInput.focus();
+            }, 0);
+        },
+    },
+    data() {
+        return { assetsData: this.dataObject };
+    },
     components: {
         MISATextfield,
         MISAButtonMain,
         MISAButtonSub,
     },
     props: {
-        tittle: {
+        title: {
             type: String,
             default: "",
         },
+        dataObject: {
+            type: Object,
+            default: {
+                AssetID: "TS00001",
+                Accumulated: null,
+                Amount: 1,
+                Department: null,
+                Name: null,
+                Remaining: {
+                    type: Number,
+                    default: null,
+                },
+                TheOriginalPrice: 0,
+                Type: null,
+                id: null,
+                YearUse: 0,
+                atrophyPercents: 0,
+                atrophy: 0,
+            },
+        },
+        formMode: {
+            type: Number,
+        },
     },
-    computed,
+    computed: {
+        date() {
+            return this.dateHandler(new Date());
+        },
+        year() {
+            return new Date().getFullYear().toString();
+        },
+    },
     methods: {
-        toggleForm: function () {
-            this.$emit("toggle-form");
+        closeForm: function () {
+            this.$emit("close-form");
+        },
+        saveForm: function () {
+            console.log(this.assetsData);
+            this.maxios.post("https://64952491b08e17c91791ae79.mockapi.io/", this.assetsData);
         },
     },
 };

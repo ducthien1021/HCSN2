@@ -86,5 +86,9 @@ const methods = {
     navbarToggle,
 };
 
-export default { methods, mounted };
+export default {
+    name: "TheNavbar",
+    methods,
+    mounted,
+};
 </script>

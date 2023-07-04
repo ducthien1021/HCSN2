@@ -4,6 +4,7 @@
     gap: 12px;
     font-size: 13px;
     position: relative;
+    margin-bottom: 6px;
 }
 
 .h-textfield input {
@@ -74,4 +75,24 @@
     background: url("../../../assets/icon/qlts-icon.svg") no-repeat -287px -67px;
     width: 18px;
     height: 18px;
+}
+
+.h-textfield__errormsg {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+    position: absolute;
+    bottom: -18px;
+}
+
+.h-textfield--error {
+    border-color: red !important;
+}
+
+.h-textfield--error:hover {
+    border-color: red !important;
+}
+
+.h-textfield--error:focus {
+    border-color: red !important;
 }
