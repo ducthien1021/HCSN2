@@ -1,0 +1,126 @@
+.btn {
+    height: 36px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 36px;
+    outline: none;
+    border: none;
+    min-width: 100px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+.icon--add {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: url(../../assets/icon/qlts-icon.svg) no-repeat -204px -424px;
+}
+
+.btn:focus {
+    outline: 2px solid #bfe6f0;
+}
+
+
+/* main button */
+
+.btn--main {
+    color: #ffffff;
+    background-color: #1aa4c8;
+}
+
+.btn--main:hover {
+    background-color: #0582a2;
+}
+
+.btn--main:active {
+    background-color: #28b7dc;
+}
+
+.btn--main:disabled {
+    background-color: #8cd1e3;
+}
+
+
+/* sub button */
+
+.btn--sub,
+.btn--sub:active {
+    background-color: #fff;
+    color: #21a7ca;
+    border: 1px solid #21a7ca;
+}
+
+.btn--sub:hover {
+    background-color: #d1edf4;
+}
+
+.btn--sub:disabled {
+    border: 1px solid #b5e2ed;
+    color: #b5e2ed;
+}
+
+
+/* outline button */
+
+.btn--outline,
+.btn--outline:active {
+    background-color: #fff;
+    color: #010101;
+    border: 1px solid #c7c7c7;
+}
+
+.btn--outline:hover {
+    background-color: #1aa4c8;
+    color: #fff;
+}
+
+.btn--outline:disabled {
+    border: 1px solid #d6d6d6;
+    color: #979797;
+    background-color: #f5f5f5;
+}
+
+
+/* icon button */
+
+.btn-icon {
+    outline: unset;
+    border: unset;
+    cursor: pointer;
+    background-image: url(../../assets/icon/qlts-icon.svg);
+    background-repeat: no-repeat;
+}
+
+.btn-icon--16 {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-icon--36 {
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.btn-icon--edit {
+    background: url(../../assets/icon/qlts-icon.svg) no-repeat -156px -68px;
+}
+
+.btn-icon--copy {
+    background: url(../../assets/icon/qlts-icon.svg) no-repeat -244px -112px;
+}
+
+.btn-icon--excel {
+    background-position: -278px -102px;
+}
+
+.btn-icon--delete {
+    background-position: -454px -103px;
+}
+
+.btn-icon--close {
+    background-position: -365px -278px;
+}

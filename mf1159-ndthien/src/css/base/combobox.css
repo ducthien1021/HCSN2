@@ -1,0 +1,139 @@
+.combobox {
+    border-radius: 4px;
+    display: flex;
+    position: relative;
+    border: 1px solid #c7c7c7;
+    width: 100%;
+    height: 35px;
+}
+
+.combobox:has(.combobox__input:focus) {
+    border: 1px solid #30adcd;
+}
+
+.combobox:hover {
+    border: 1px solid #5fbfd9;
+}
+
+.cbx--error {
+    border: 1px solid red !important;
+}
+
+.combobox__input {
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    border: unset;
+}
+
+.pd-left-14 {
+    padding-left: 14px;
+}
+
+.pd-left-35 {
+    padding-left: 35px;
+}
+
+.combobox__icon {
+    border-radius: 4px;
+    height: 100%;
+    width: 35px;
+    border: none;
+    background-color: #fff;
+    background-image: url(../../assets/icon/qlts-icon.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+}
+
+.combobox__icon--arrow-down {
+    right: 0;
+    background-position: -58px -322px;
+}
+
+.combobox__icon--filter {
+    left: 0;
+    background-position: -236px -59px;
+}
+
+.combobox__data {
+    background-color: #fff;
+    width: 100%;
+    padding: 3px;
+    position: absolute;
+    z-index: 5;
+    top: calc( 100% + 3px);
+    max-height: 300px;
+    overflow: auto;
+    box-shadow: -1px 5px 12px 0px rgba(65, 50, 50, 0.75);
+    -webkit-box-shadow: -1px 5px 12px 0px rgba(65, 50, 50, 0.75);
+    -moz-box-shadow: -1px 5px 12px 0px rgba(65, 50, 50, 0.75);
+    border-radius: 4px;
+}
+
+
+/* Custom scrollbar Combobox*/
+
+
+/* width + height*/
+
+.combobox__data::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+
+/* Track */
+
+.combobox__data::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #d1dae9;
+}
+
+
+/* Handle */
+
+.combobox__data::-webkit-scrollbar-thumb {
+    background: #abb6c8;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+.combobox__data::-webkit-scrollbar-thumb:hover {
+    background: #abb6c8;
+}
+
+.combobox__data--item {
+    border-radius: 4px;
+    padding-left: 50px;
+    width: 100%;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.combobox__data--item:hover {
+    background-color: #e6f1fa;
+}
+
+.combobox__data--active {
+    background-color: #c7e0f5;
+}
+
+.combobox__data--icon-active {
+    padding: 12px;
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url(../../assets/icon/icon-tick.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px 5px;
+}
