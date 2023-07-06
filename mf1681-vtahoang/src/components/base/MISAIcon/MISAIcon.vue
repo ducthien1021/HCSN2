@@ -3,16 +3,15 @@
 </template>
 
 <script>
-const props = {
-    icon: {
-        type: String,
-        default: "",
-    },
-};
-
 export default {
     name: "MISAIcon",
-    props,
+    props: {
+        // icon truyền vào
+        icon: {
+            type: String,
+            default: "",
+        },
+    },
 };
 </script>
 

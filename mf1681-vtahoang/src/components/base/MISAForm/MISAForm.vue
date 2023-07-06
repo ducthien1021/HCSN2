@@ -26,13 +26,14 @@
                 </div>
                 <div class="h-form__row">
                     <div class="h-form__departmentid">
-                        <MISATextfield
+                        <MISADropdown
                             label="Mã bộ phận sử dụng"
                             :required="true"
-                            placeholder="Chọn mã bộ phận sử dụng"
-                            icon="expand"
                             v-model="assetsData.Department"
-                        ></MISATextfield>
+                            text="Chọn mã bộ phận sử dụng"
+                            :dataList="this.$_MISAResources.department"
+                            :iconRight="'expand'"
+                        ></MISADropdown>
                     </div>
                     <div class="h-form__department">
                         <MISATextfield label="Tên bộ phận sử dụng" :disable="true"></MISATextfield>
@@ -40,13 +41,14 @@
                 </div>
                 <div class="h-form__row">
                     <div class="h-form__assetid">
-                        <MISATextfield
+                        <MISADropdown
                             label="Mã loại tài sản"
                             :required="true"
-                            placeholder="Chọn mã loại tài sản"
-                            icon="expand"
                             v-model="assetsData.Type"
-                        ></MISATextfield>
+                            text="Chọn mã loại tài sản"
+                            :dataList="this.$_MISAResources.department"
+                            :iconRight="'expand'"
+                        ></MISADropdown>
                     </div>
                     <div class="h-form__asset">
                         <MISATextfield label="Tên Loại tài sản" :disable="true"></MISATextfield>
@@ -127,8 +129,12 @@
                 </div>
             </div>
             <div class="h-form__footer">
-                <MISAButtonSub :style="{ width: '96px' }" @click="closeForm">Huỷ</MISAButtonSub>
-                <MISAButtonMain :style="{ width: '96px' }" @click="saveForm">Lưu</MISAButtonMain>
+                <div class="h-footer__btn--cancel">
+                    <MISAButtonSub @click="closeForm">Huỷ</MISAButtonSub>
+                </div>
+                <div class="h-footer__btn--save">
+                    <MISAButtonMain @click="saveForm">Lưu</MISAButtonMain>
+                </div>
             </div>
         </div>
     </div>
@@ -142,10 +148,12 @@
 import MISATextfield from "../MISATextfield/MISATextfield.vue";
 import MISAButtonMain from "../MISAButton/MISAButtonMain.vue";
 import MISAButtonSub from "../MISAButton/MISAButtonSub.vue";
+import MISADropdown from "../MISADropdown/MISADropdown.vue";
 
 export default {
     name: "MISAForm",
     watch: {
+        // khi dataObject thay đổi thì gán cho assetsData
         dataObject: function () {
             this.assetsData = this.dataObject;
         },
@@ -157,18 +165,23 @@ export default {
         },
     },
     data() {
-        return { assetsData: this.dataObject };
+        return {
+            assetsData: this.dataObject, // dữ liệu tài sản
+        };
     },
     components: {
         MISATextfield,
         MISAButtonMain,
         MISAButtonSub,
+        MISADropdown,
     },
     props: {
+        // tiêu đề của form
         title: {
             type: String,
             default: "",
         },
+        // dữ liệu tài sản truyền vào
         dataObject: {
             type: Object,
             default: {
@@ -189,25 +202,28 @@ export default {
                 atrophy: 0,
             },
         },
+        // chế độ form add/edit
         formMode: {
             type: Number,
         },
     },
     computed: {
+        // lấy ngày hiện tại
         date() {
             return this.dateHandler(new Date());
         },
+        // lấy năm hiện tại
         year() {
             return new Date().getFullYear().toString();
         },
     },
     methods: {
+        //đang xử lý
         closeForm: function () {
             this.$emit("close-form");
         },
         saveForm: function () {
-            console.log(this.assetsData);
-            this.maxios.post("https://64952491b08e17c91791ae79.mockapi.io/", this.assetsData);
+            this.$emit("close-form");
         },
     },
 };

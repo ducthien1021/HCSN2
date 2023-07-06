@@ -59,40 +59,44 @@ export default {
     },
     data() {
         return {
-            inputValue: this.modelValue,
-            errormsg: this.modeErrormsg,
+            inputValue: this.modelValue, // giá trị của input
+            errormsg: this.modeErrormsg, // error message
         };
     },
     props: {
+        // nhãn
         label: {
             type: String,
             default: "",
         },
+        // placeholder
         placeholder: {
             type: String,
             default: "",
         },
+        // bắt buộc nhập
         required: {
             type: Boolean,
             default: false,
         },
-        value: {
-            type: String,
-            default: "",
-        },
+        // set disable
         disable: {
             type: Boolean,
             default: false,
         },
+        // căn phải
         textRight: {
             type: Boolean,
             default: false,
         },
+        // icon
         icon: {
             type: String,
             default: "",
         },
+        // giá trị v-model
         modelValue: {},
+        // model error message
         modeErrormsg: {
             type: String,
             default: "",

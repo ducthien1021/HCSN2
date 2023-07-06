@@ -39,3 +39,9 @@
     width: 18px;
     height: 18px;
 }
+
+.filter {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -243px -69px;
+    width: 17px;
+    height: 16px;
+}

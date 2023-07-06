@@ -1,5 +1,6 @@
 /**
  * Xử lý dữ liệu số
+ * @param {Number} value giá trị cần xử lý
  * Author: vtahoang - (23/06/2023)
  */
 function numberHandler(value) {

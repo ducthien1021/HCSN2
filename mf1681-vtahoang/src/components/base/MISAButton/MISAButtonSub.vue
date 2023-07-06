@@ -1,5 +1,5 @@
 <template>
-    <button class="h-btn__sub" :style="style">
+    <button class="h-btn__sub">
         <slot></slot>
     </button>
 </template>
@@ -11,13 +11,10 @@
 <script>
 export default {
     props: {
+        // icon truyền vào
         icon: {
             type: String,
             default: "",
-        },
-        style: {
-            type: Object,
-            default: {},
         },
     },
 };

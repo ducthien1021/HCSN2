@@ -10,10 +10,20 @@
                             <MISASearch placeholder="Tìm kiếm tài sản"></MISASearch>
                         </div>
                         <div class="h-toolbar__assettype">
-                            <MISADropdown text="Loại tài sản"></MISADropdown>
+                            <MISADropdown
+                                text="Loại tài sản"
+                                :dataList="this.$_MISAResources.assetType"
+                                :iconLeft="'filter'"
+                                :iconRight="'expand'"
+                            ></MISADropdown>
                         </div>
                         <div class="h-toolbar__department">
-                            <MISADropdown text="Bộ phận sử dụng"></MISADropdown>
+                            <MISADropdown
+                                text="Bộ phận sử dụng"
+                                :dataList="this.$_MISAResources.department"
+                                :iconLeft="'filter'"
+                                :iconRight="'expand'"
+                            ></MISADropdown>
                         </div>
                     </div>
                     <div class="h-toolbar__right">
@@ -278,15 +288,6 @@ function created() {
      * Lấy danh sách tài sản
      * Author: vtahoang - (23/06/2023)
      */
-    // fetch("https://64952491b08e17c91791ae79.mockapi.io/HCSN")
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         this.assetsList = data;
-    //         this.updateTotal();
-    //     })
-    //     .catch((error) => {
-    //         console.log(error);
-    //     });
     this.maxios
         .get("https://64952491b08e17c91791ae79.mockapi.io/HCSN")
         .then((data) => {
@@ -316,7 +317,6 @@ export default {
         MISAForm,
         MISAIcon,
     },
-
     data: () => {
         return {
             assetsList: [], //danh sách tài sản
@@ -326,7 +326,7 @@ export default {
             totalAccumulated: 0, // tổng hao mòn lũy kế
             totalRemaining: 0, // tổng giá trị còn lại
             formMode: 0, // trạng thái form
-            dataObject: {},
+            dataObject: {}, // dữ liệu truyền vào form
         };
     },
     methods: {

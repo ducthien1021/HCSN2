@@ -59,24 +59,6 @@
     transform: translateY(50%);
 }
 
-.h-textfield__icon--expand {
-    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -72px -338px;
-    width: 7px;
-    height: 5px;
-}
-
-.h-textfield__icon--dropdown {
-    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -204px -332px;
-    width: 8px;
-    height: 16px;
-}
-
-.h-textfield__icon--calender {
-    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -287px -67px;
-    width: 18px;
-    height: 18px;
-}
-
 .h-textfield__errormsg {
     color: red;
     font-size: 12px;
