@@ -1,0 +1,38 @@
+@import url(./variable.css);
+*,
+::before,
+::after {
+    box-sizing: border-box
+}
+
+body {
+    position: relative;
+    margin: var(--header-height) 0 0 0!important;
+    padding: 0 0 0 var(--nav-width) ;
+    font-size: var(--normal-font-size)!important;
+    transition: .5s;
+    font-family: default-font!important;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+@font-face {
+    font-family: default-font;
+    src: url(../assets/font/Roboto-Regular.ttf);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
