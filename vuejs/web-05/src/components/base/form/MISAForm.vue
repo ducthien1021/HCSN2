@@ -37,7 +37,7 @@
             <label for="department-code">{{ formInfo.department_code }} <span>*</span></label>
             <br />
             <MISACombobox :api="fixedAsset.departmentURL" v-model="product.DepartmentCode" propText="DepartmentCode"
-              propValue="DepartmentId" customType="text" customPlaceholder="Nhập mã bộ phận sử dụng"
+              propValue="DepartmentIds" customType="text" customPlaceholder="Nhập mã bộ phận sử dụng"
               customId="department-code" tab="3" />
 
 
@@ -55,7 +55,7 @@
           <div class="row-input-left">
             <label for="product-type-code">{{ formInfo.fixed_asset_category_code }} <span>*</span></label>
             <br />
-            <MISACombobox :api="fixedAsset.departmentURL" tab="4" propText="DepartmentCode" propValue="DepartmentId"
+            <MISACombobox :api="fixedAsset.departmentURL" tab="4" propText="DepartmentCode" propValue="DepartmentIds"
               v-model="product.DepartmentCode" customType="text" customPlaceholder="Chọn mã loại tài sản"
               customId="product-type-code" />
           </div>
