@@ -1,0 +1,36 @@
+.h-dialog {
+    width: 420px;
+    padding: 24px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.h-dialog__header {
+    min-height: 24px;
+}
+.h-dialog__body {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.h-dialog__footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 40px;
+    gap: 12px;
+}
+
+.h-footer__btn {
+    width: 100px;
+    height: 36px;
+}

@@ -1,0 +1,29 @@
+.h-contextmenu {
+    position: absolute;
+    background-color: #fff;
+    width: 150px;
+    padding: 6px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+}
+
+.h-contextmenu__item {
+    background-color: #fff;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+}
+
+.h-contextmenu__item:hover {
+    background-color: var(--color-grey-4);
+}
+
+/* 
+.h-contextmenu__item:last-child {
+    border-bottom: none;
+} */

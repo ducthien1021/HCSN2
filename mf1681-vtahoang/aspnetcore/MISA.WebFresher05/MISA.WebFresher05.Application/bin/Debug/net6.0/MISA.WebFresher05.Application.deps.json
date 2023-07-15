@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MISA.WebFresher05.Application/1.0.0": {
+        "dependencies": {
+          "MISA.WebFresher05.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MISA.WebFresher05.Application.dll": {}
+        }
+      },
+      "MISA.WebFresher05.Domain/1.0.0": {
+        "runtime": {
+          "MISA.WebFresher05.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MISA.WebFresher05.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MISA.WebFresher05.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

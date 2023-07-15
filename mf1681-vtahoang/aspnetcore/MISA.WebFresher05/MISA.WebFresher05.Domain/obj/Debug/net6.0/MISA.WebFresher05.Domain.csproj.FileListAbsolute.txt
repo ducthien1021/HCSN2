@@ -1,0 +1,12 @@
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\bin\Debug\net6.0\MISA.WebFresher05.Domain.deps.json
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\bin\Debug\net6.0\MISA.WebFresher05.Domain.dll
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\bin\Debug\net6.0\MISA.WebFresher05.Domain.pdb
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\obj\Debug\net6.0\MISA.WebFresher05.Domain.csproj.AssemblyReference.cache
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\obj\Debug\net6.0\MISA.WebFresher05.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\obj\Debug\net6.0\MISA.WebFresher05.Domain.AssemblyInfoInputs.cache
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\obj\Debug\net6.0\MISA.WebFresher05.Domain.AssemblyInfo.cs
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\obj\Debug\net6.0\MISA.WebFresher05.Domain.csproj.CoreCompileInputs.cache
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\obj\Debug\net6.0\MISA.WebFresher05.Domain.dll
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\obj\Debug\net6.0\refint\MISA.WebFresher05.Domain.dll
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\obj\Debug\net6.0\MISA.WebFresher05.Domain.pdb
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Domain\obj\Debug\net6.0\ref\MISA.WebFresher05.Domain.dll
