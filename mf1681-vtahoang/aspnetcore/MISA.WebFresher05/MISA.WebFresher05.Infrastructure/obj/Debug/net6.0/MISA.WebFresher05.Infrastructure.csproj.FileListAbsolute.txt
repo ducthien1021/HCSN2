@@ -1,0 +1,15 @@
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\bin\Debug\net6.0\MISA.WebFresher05.Infrastructure.deps.json
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\bin\Debug\net6.0\MISA.WebFresher05.Infrastructure.dll
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\bin\Debug\net6.0\MISA.WebFresher05.Infrastructure.pdb
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\bin\Debug\net6.0\MISA.WebFresher05.Domain.dll
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\bin\Debug\net6.0\MISA.WebFresher05.Domain.pdb
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\MISA.WebFresher05.Infrastructure.csproj.AssemblyReference.cache
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\MISA.WebFresher05.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\MISA.WebFresher05.Infrastructure.AssemblyInfoInputs.cache
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\MISA.WebFresher05.Infrastructure.AssemblyInfo.cs
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\MISA.WebFresher05.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\MISA.WebFresher05.Infrastructure.csproj.CopyComplete
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\MISA.WebFresher05.Infrastructure.dll
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\refint\MISA.WebFresher05.Infrastructure.dll
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\MISA.WebFresher05.Infrastructure.pdb
+C:\Intern\web202305\mf1681-vtahoang\aspnetcore\MISA.WebFresher05\MISA.WebFresher05.Infrastructure\obj\Debug\net6.0\ref\MISA.WebFresher05.Infrastructure.dll

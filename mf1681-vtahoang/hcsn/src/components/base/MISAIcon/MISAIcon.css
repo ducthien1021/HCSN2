@@ -1,0 +1,102 @@
+.add--black {
+    background: url("/src/assets/icon/qlts-icon.svg") no-repeat -467px -423px;
+    width: 10px;
+    height: 10px;
+}
+
+.add--white {
+    background: url("/src/assets/icon/qlts-icon.svg") no-repeat -204px -424px;
+    width: 8px;
+    height: 8px;
+}
+
+.delete {
+    background: url("/src/assets/icon/qlts-icon.svg") no-repeat -463px -111px;
+    width: 18px;
+    height: 18px;
+}
+
+.excel {
+    background: url("/src/assets/icon/qlts-icon.svg") no-repeat -287px -111px;
+    width: 18px;
+    height: 18px;
+}
+
+.expand {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -72px -338px;
+    width: 7px;
+    height: 5px;
+}
+
+.up_down_arrows {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -204px -332px;
+    width: 8px;
+    height: 16px;
+}
+
+.calendar {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -287px -67px;
+    width: 18px;
+    height: 18px;
+}
+
+.filter {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -243px -69px;
+    width: 17px;
+    height: 16px;
+}
+
+.warning {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -416px -66px;
+    width: 24px;
+    height: 20px;
+}
+
+.loading {
+    background: url("../../../assets/icon/loading.svg");
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    animation: rotate 2s linear infinite;
+}
+
+.emptyBox {
+    background: url("../../../assets/icon/emptyBox.svg");
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+}
+
+.back__black {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -28px -246px;
+    width: 8px;
+    height: 12px;
+}
+
+.next__black {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -72px -246px;
+    width: 8px;
+    height: 12px;
+}
+
+.success {
+    background: url("../../../assets/icon/success.svg");
+    width: 22px;
+    height: 22px;
+    background-size: cover;
+}
+
+.close {
+    background: url("../../../assets/icon/qlts-icon.svg") no-repeat -375px -287px;
+    width: 18px;
+    height: 18px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

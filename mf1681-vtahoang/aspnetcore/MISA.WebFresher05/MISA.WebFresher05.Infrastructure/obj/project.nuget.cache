@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "CBzwJA1JSpVUO/VHSYSnRPaD9zoGj063OJPiexh3GmL97NZSSPl8UgS4cX4J9JlGll7S7u4K5DT6h0K2X1POyA==",
+  "success": true,
+  "projectFilePath": "C:\\Intern\\web202305\\mf1681-vtahoang\\aspnetcore\\MISA.WebFresher05\\MISA.WebFresher05.Infrastructure\\MISA.WebFresher05.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vutri\\.nuget\\packages\\dapper\\2.0.143\\dapper.2.0.143.nupkg.sha512",
+    "C:\\Users\\vutri\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\vutri\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\vutri\\.nuget\\packages\\mysqlconnector\\2.2.6\\mysqlconnector.2.2.6.nupkg.sha512",
+    "C:\\Users\\vutri\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\vutri\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\vutri\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\vutri\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
