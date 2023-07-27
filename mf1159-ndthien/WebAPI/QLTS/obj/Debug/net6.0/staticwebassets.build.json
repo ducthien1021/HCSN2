@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9Ij5V8pZR4fByDqT1XCnyfSxGbXccVjH1f0G1skL/Go=",
+  "Source": "QLTS.API",
+  "BasePath": "_content/QLTS.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

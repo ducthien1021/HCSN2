@@ -1,0 +1,15 @@
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\QLTS.Application.csproj.AssemblyReference.cache
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\QLTS.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\QLTS.Application.AssemblyInfoInputs.cache
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\QLTS.Application.AssemblyInfo.cs
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\QLTS.Application.csproj.CoreCompileInputs.cache
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\bin\Debug\net6.0\QLTS.Application.deps.json
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\bin\Debug\net6.0\QLTS.Application.dll
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\bin\Debug\net6.0\QLTS.Application.pdb
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\bin\Debug\net6.0\QLTS.Domain.dll
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\bin\Debug\net6.0\QLTS.Domain.pdb
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\QLTS.Application.csproj.CopyComplete
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\QLTS.Application.dll
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\refint\QLTS.Application.dll
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\QLTS.Application.pdb
+D:\2023MISA\6-2023_Misafresher\WebAPI\QLTS.Application\obj\Debug\net6.0\ref\QLTS.Application.dll
