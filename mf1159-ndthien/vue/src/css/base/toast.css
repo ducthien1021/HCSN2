@@ -1,0 +1,20 @@
+.Toastify__toast {
+    min-height: 56px !important;
+    min-width: 350px !important;
+}
+
+.Toastify__toast-container--bottom-right {
+    bottom: 20px !important;
+    right: 50px !important;
+    padding: unset !important;
+}
+
+.Toastify__toast-icon {
+    width: 30px !important;
+    margin-inline-end: 20px !important;
+}
+
+.Toastify__toast-body>div:last-child {
+    font-size: 13px !important;
+    color: #000 !important;
+}

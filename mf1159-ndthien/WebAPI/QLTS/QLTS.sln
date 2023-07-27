@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLTS.API", "QLTS.API.csproj", "{E697BF4F-B511-4BFF-BDB7-9C31B7B6F902}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLTS.Tests", "..\QLTS.Tests\QLTS.Tests.csproj", "{5F13C3F1-2832-4DE2-B02E-5D39CD981FFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLTS.Application", "..\QLTS.Application\QLTS.Application.csproj", "{CC9F5407-F41E-44B7-88EF-5013AFC6E23F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLTS.Domain", "..\QLTS.Domain\QLTS.Domain.csproj", "{054EC24B-BEBF-4163-9DCD-B9F838D675D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLTS.Infrastructure", "..\QLTS.Infrastructure\QLTS.Infrastructure.csproj", "{15CF3137-EE44-466F-A343-9E20F24F08F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QLTS.Domain.Tests", "..\QLTS.Domain.Tests\QLTS.Domain.Tests.csproj", "{25E47161-6075-4732-A676-C077D677B4DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLTS.Application.Tests", "..\QLTS.Application.Tests\QLTS.Application.Tests.csproj", "{6A64F8B1-1B33-4712-B731-719610E69FC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E697BF4F-B511-4BFF-BDB7-9C31B7B6F902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E697BF4F-B511-4BFF-BDB7-9C31B7B6F902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E697BF4F-B511-4BFF-BDB7-9C31B7B6F902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E697BF4F-B511-4BFF-BDB7-9C31B7B6F902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F13C3F1-2832-4DE2-B02E-5D39CD981FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F13C3F1-2832-4DE2-B02E-5D39CD981FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F13C3F1-2832-4DE2-B02E-5D39CD981FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F13C3F1-2832-4DE2-B02E-5D39CD981FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC9F5407-F41E-44B7-88EF-5013AFC6E23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9F5407-F41E-44B7-88EF-5013AFC6E23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9F5407-F41E-44B7-88EF-5013AFC6E23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9F5407-F41E-44B7-88EF-5013AFC6E23F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054EC24B-BEBF-4163-9DCD-B9F838D675D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054EC24B-BEBF-4163-9DCD-B9F838D675D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054EC24B-BEBF-4163-9DCD-B9F838D675D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054EC24B-BEBF-4163-9DCD-B9F838D675D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15CF3137-EE44-466F-A343-9E20F24F08F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CF3137-EE44-466F-A343-9E20F24F08F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CF3137-EE44-466F-A343-9E20F24F08F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CF3137-EE44-466F-A343-9E20F24F08F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E47161-6075-4732-A676-C077D677B4DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E47161-6075-4732-A676-C077D677B4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E47161-6075-4732-A676-C077D677B4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E47161-6075-4732-A676-C077D677B4DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A64F8B1-1B33-4712-B731-719610E69FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A64F8B1-1B33-4712-B731-719610E69FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A64F8B1-1B33-4712-B731-719610E69FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A64F8B1-1B33-4712-B731-719610E69FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1980EA5-1DA9-4F94-B4D7-B85362F492D8}
+	EndGlobalSection
+EndGlobal

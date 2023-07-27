@@ -1,0 +1,80 @@
+/* Begin Custom element input number UI */
+
+.is-error .el-input__wrapper {
+    border: 1px solid red !important;
+    border-radius: 4px !important;
+}
+
+.el-input-number {
+    width: 100% !important;
+}
+
+.el-input-number .el-input__inner {
+    text-align: right !important;
+    font-size: 14px !important;
+    color: #000 !important;
+}
+
+.el-input-number__increase .el-icon svg,
+.el-input-number__decrease .el-icon svg {
+    display: none !important;
+}
+
+.el-input-number .el-icon {
+    background-image: url(../../assets/icon/qlts-icon.svg) !important;
+    background-repeat: no-repeat !important;
+}
+
+.el-input-number__increase .el-icon {
+    background-position: -26px -330px !important;
+}
+
+.el-input-number__decrease .el-icon {
+    background-position: -70px -336px !important;
+}
+
+.el-input-number.is-controls-right .el-input-number__increase,
+.el-input-number.is-controls-right .el-input-number__decrease {
+    border: none !important;
+    background-color: #fff !important;
+}
+
+.el-input-number.is-controls-right .el-input-number__decrease [class*="el-icon"],
+.el-input-number.is-controls-right .el-input-number__increase [class*="el-icon"] {
+    transform: unset !important;
+}
+
+.el-input-number.is-controls-right .el-input__wrapper {
+    padding: 0 35px !important;
+}
+
+
+/* End Custom element input number UI */
+
+.suffix {
+    width: 35px;
+    height: 100%;
+    flex: 0 0 35px;
+}
+
+.suffix__btn {
+    width: 100%;
+    height: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-image: url(../../assets/icon/qlts-icon.svg) !important;
+    background-repeat: no-repeat !important;
+}
+
+.icon--increase {
+    background-position: -14px -330px !important;
+}
+
+.icon--decrease {
+    background-position: -58px -335px !important;
+}
+
+.pr-0 {
+    padding-right: 0px !important;
+}

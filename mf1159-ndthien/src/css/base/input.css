@@ -1,0 +1,117 @@
+.input {
+    border: 1px solid #c7c7c7;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #fff;
+    outline: unset;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.input:focus {
+    border: 1px solid #30adcd;
+}
+
+.input:hover {
+    border: 1px solid #5fbfd9;
+}
+
+.input:disabled {
+    border: 1px solid #c7c7c7;
+    background-color: #f5f5f5;
+}
+
+.input--error {
+    border: 1px solid red !important;
+}
+
+.label {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.error-msg {
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+.require {
+    color: red;
+}
+
+
+/* input icon */
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon input {
+    border: 1px solid #c7c7c7;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #fff;
+    outline: unset;
+    padding-left: calc(7px + 24px + 8px);
+    padding-right: 14px;
+}
+
+.input-icon input:focus {
+    border: 1px solid #30adcd;
+}
+
+.input-icon input:hover {
+    border: 1px solid #5fbfd9;
+}
+
+.input-icon input:disabled {
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+}
+
+.input-icon__icon {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/icon/qlts-icon.svg);
+    background-repeat: no-repeat;
+}
+
+.input-icon__icon--search {
+    background-position: -240px -21px;
+}
+
+::placeholder {
+    font-style: italic;
+    color: #838383;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-style: italic;
+    color: #838383;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    font-style: italic;
+    color: #838383;
+}
+
+.text-right {
+    text-align: right;
+}

@@ -1,0 +1,49 @@
+.el-date-editor.el-input {
+    width: 100% !important;
+    height: 35px !important;
+    font-size: 13px;
+}
+
+.el-input__wrapper {
+    border: 1px solid #c7c7c7;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    background-color: #fff;
+    outline: unset;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 4px !important;
+    overflow: hidden;
+    box-shadow: none !important;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.el-input__wrapper:hover {
+    border-color: #5fbfd9;
+}
+
+.el-input__wrapper.is-focus {
+    border-color: #5fbfd9;
+}
+
+.el-input__prefix .el-input__prefix-inner .el-input__icon {
+    background: url(../../assets/icon/qlts-icon.svg) no-repeat -287px -67px !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.el-input__icon svg {
+    display: none !important;
+}
+
+.el-input__prefix-inner> :last-child {
+    margin-right: 0;
+}
+
+.el-input__suffix .el-input__suffix-inner {
+    display: none !important;
+}
